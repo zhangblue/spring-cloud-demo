@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>cooud-provider-payment</artifactId>
+  <artifactId>cloud-provider-payment</artifactId>
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
@@ -34,7 +34,7 @@
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid-spring-boot-starter</artifactId>
-<!--      <version>1.1.10</version>-->
+      <!--      <version>1.1.10</version>-->
       <version>1.1.16</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java
@@ -76,6 +76,7 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
 
 
   </dependencies>

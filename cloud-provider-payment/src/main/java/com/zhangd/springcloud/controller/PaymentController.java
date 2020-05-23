@@ -25,7 +25,7 @@ public class PaymentController {
 
 
   @RequestMapping(value = "/create",method = RequestMethod.POST)
-  public CommonResult<Payment> create(Payment payment) {
+  public CommonResult<Payment> create(@RequestBody Payment payment) {
 
     log.info(payment.getSerial());
     int count = paymentService.create(payment);
