@@ -1,2 +1,14 @@
 server:
   port: 80
+
+spring:
+  application:
+    name: cloud-order-service # 设置工程名称。工程会已这个名字注册进eureka中
+
+# eureka 配置
+eureka:
+  client:
+    register-with-eureka: true # 表示是否将自己的注册进EurekaServer 默认为true
+    fetch-registry: true # 表示是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    service-url:
+      defaultZone: http://localhost:7001/eureka # 填写eureka的服务端地址，必须加/eureka 否则会报错访问不到

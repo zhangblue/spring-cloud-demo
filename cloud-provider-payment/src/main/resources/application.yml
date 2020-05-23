@@ -1,6 +1,7 @@
 server:
   port: 8001
 
+# 以下为spring-boot配置
 spring:
   application:
     name: cloud-payment-service # 项目名称
@@ -11,6 +12,15 @@ spring:
     username: bangcle_pg
     password:
 
+# 以下为mybatis配置
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   type-aliases-package: com.zhangd.springcloud.entities # 所有entity别名类所在包
+
+# eureka 配置
+eureka:
+  client:
+    register-with-eureka: true # 表示是否将自己的注册进EurekaServer 默认为true
+    fetch-registry: true # 表示是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    service-url:
+      defaultZone: http://localhost:7001/eureka # 填写eureka的服务端地址，必须加/eureka 否则会报错访问不到

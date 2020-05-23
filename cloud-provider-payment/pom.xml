@@ -78,11 +78,17 @@
       <scope>test</scope>
     </dependency>
 
-
+    <!--自定义公共模块-->
     <dependency>
       <groupId>com.zhangdi.springcloud</groupId>
       <artifactId>cloud-api-commons</artifactId>
       <version>${project.version}</version>
+    </dependency>
+
+    <!-- 引入eureka客户端-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
 
 
