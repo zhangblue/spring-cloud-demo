@@ -11,4 +11,5 @@ eureka:
     register-with-eureka: true # 表示是否将自己的注册进EurekaServer 默认为true
     fetch-registry: true # 表示是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
     service-url:
-      defaultZone: http://localhost:7001/eureka # 填写eureka的服务端地址，必须加/eureka 否则会报错访问不到
+      # defaultZone: http://localhost:7001/eureka # 单机版。填写eureka的服务端地址，必须加/eureka 否则会报错访问不到
+      defaultZone: http://172.16.12.23:7001/eureka,http://172.16.12.23:7002/eureka # 集群版
