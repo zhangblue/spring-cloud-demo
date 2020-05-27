@@ -20,7 +20,11 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class OrderController {
 
-  public static final String PAYMENT_URL = "http://localhost:8001";
+  /**
+   * 此处直接设置eureka中的服务名称即可，需要配合RestTemplate中的@LoadBalanced标签使用
+   */
+  public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+//  public static final String PAYMENT_URL = "http://172.16.12.23:8001";
 
   @Autowired
   private RestTemplate restTemplate;
@@ -35,6 +39,7 @@ public class OrderController {
   public CommonResult<Payment> getPayment(@RequestParam(value = "id") Long id) {
     Map<String, String> mapRequest = new HashMap<>(1);
     mapRequest.put("id", id.toString());
+
     return restTemplate
         .getForObject(PAYMENT_URL + "/payment/get?id={id}", CommonResult.class, mapRequest);
   }

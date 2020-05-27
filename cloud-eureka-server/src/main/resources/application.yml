@@ -1,7 +1,6 @@
 server:
   port: 7001
 
-
 eureka:
   instance:
     hostname: 172.16.36.123
@@ -9,11 +8,10 @@ eureka:
     register-with-eureka: false # false表示不想注册中心注册自己
     fetch-registry: false # false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      defaultZone: http://eureka7002.com:7002/eureka/ # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址。当eureka为集群模式时，此内容为除自己以外的其他eureka服务地址
 
 logging:
   file:
-    name: log.txt
     path: ./logs/
     max-size: 10MB
-  level: info

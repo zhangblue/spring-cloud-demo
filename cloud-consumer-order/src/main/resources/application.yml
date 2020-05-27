@@ -13,3 +13,8 @@ eureka:
     service-url:
       # defaultZone: http://localhost:7001/eureka # 单机版。填写eureka的服务端地址，必须加/eureka 否则会报错访问不到
       defaultZone: http://172.16.12.23:7001/eureka,http://172.16.12.23:7002/eureka # 集群版
+
+logging:
+  file:
+    path: ./logs/
+    max-size: 10MB
