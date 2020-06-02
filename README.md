@@ -9,3 +9,5 @@ Spring Cloud 框架搭建 demo
 eureka 停止更新：https://github.com/Netflix/eureka/wiki
 
 # Zookeeper
+1. 使用3.5.6版本
+2. 关闭防火墙
