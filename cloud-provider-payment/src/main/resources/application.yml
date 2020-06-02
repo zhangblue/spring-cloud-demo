@@ -28,8 +28,10 @@ eureka:
   instance:
     instance-id: payment8001 # 设置eureka中status字段中显示内容
     prefer-ip-address: true # 访问路径可以显示IP地址
+    lease-renewal-interval-in-seconds: 3 # Eureka 客户端向服务端发送心跳的时间间隔
+    lease-expiration-duration-in-seconds: 6 # Eureka服务端在收到最后一次心跳后等待时间上限，超时将剔除服务
 
-
+# 以下为log配置
 logging:
   file:
     path: ./logs/
