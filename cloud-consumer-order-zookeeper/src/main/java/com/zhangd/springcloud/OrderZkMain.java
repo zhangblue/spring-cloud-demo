@@ -5,15 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * @author di.zhang
- * @date 2020/6/2
- * @time 22:46
- **/
+ * @author zhangd
+ */
 @SpringBootApplication
-@EnableDiscoveryClient // 该注解用于向使用consul或者zookeeper作为注册中心时注册服务
-public class PaymentMain {
+@EnableDiscoveryClient
+public class OrderZkMain {
 
   public static void main(String[] args) {
-    SpringApplication.run(PaymentMain.class, args);
+    SpringApplication.run(OrderZkMain.class, args);
   }
 }

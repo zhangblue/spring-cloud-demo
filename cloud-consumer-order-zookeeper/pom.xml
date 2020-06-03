@@ -87,7 +87,7 @@
         <configuration>
           <fork>true</fork>
           <addResources>true</addResources>
-          <mainClass>com.zhangd.springcloud.PaymentMain</mainClass>
+          <mainClass>com.zhangd.springcloud.OrderZkMain</mainClass>
         </configuration>
         <executions>
           <execution>
