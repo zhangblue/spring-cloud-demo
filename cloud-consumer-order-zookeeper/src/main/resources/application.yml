@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  # 服务别名--注册zookeeper到注册中心名称
+  application:
+    name: cloud-consumer-order
+  cloud:
+    zookeeper:
+      connect-string: office-elastic:2181
+
+# 以下为log配置
+logging:
+  file:
+    path: ./logs/
+    max-size: 10MB
